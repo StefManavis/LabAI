@@ -1,0 +1,46 @@
+import java.util.*;
+
+public class UcsSearch {
+    // Define the Node class
+    public static class Node {
+        private char nodeName;
+        private List<Edge> adjacencies; // List to store adjacent nodes
+
+        public Node(char nodeName) {
+            this.nodeName = nodeName;
+            this.adjacencies = new ArrayList<>();
+        }
+		public void addEdge(Node node, int cost) {
+            adjacencies.add(new Edge(node, cost));
+        }
+    }
+
+    // Define the Edge class
+    public static class Edge {
+        private Node node;
+        private int cost;
+
+        public Edge(Node node, int cost) {
+            this.node = node;
+            this.cost = cost;
+        }
+		
+    }
+
+    public static void main(String[] args) {
+        // Initialize the graph nodes
+        Node n0 = new Node('0');
+        Node n1 = new Node('1');
+        Node n2 = new Node('2');
+        Node n3 = new Node('3');
+        Node n4 = new Node('4');
+        Node n5 = new Node('5');
+        Node n6 = new Node('6');
+        Node n7 = new Node('7');
+        Node n8 = new Node('8');
+
+        // Initialize the edges and the cost to get there
+        // You can continue adding edges in a similar manner for other nodes
+		n0.addEdge(n1,1);
+    }
+}
